@@ -182,7 +182,7 @@ python data-engineering.py
 ```
 
 Note: due to the size of the datasets that are processed, you will need to run the script on a machine with sufficient RAM.
-I ran the script on an Mac mini with 16GB of RAM.
+I ran the script on a Mac mini with 16GB of RAM.
 
 #### `power-analysis.py`
 
