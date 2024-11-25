@@ -1,10 +1,10 @@
 ![Duke AIPI Logo](https://storage.googleapis.com/aipi_datasets/Duke-AIPI-Logo.png)
 # IMDB Movie Cast and Crew Dataset
-This dataset and corresponding notebook captures an analysis of cast and crew member IMDB ratings and box office earnings, and correlation with box office performance and audience/critical reception.
+This dataset and corresponding notebook captures an analysis of cast and crew member IMDB ratings (averaged across all of their work) and correlation of the average of these ratings across production cast/crew with a title's IMDB rating.
 
 ## Motivation
 
-The motivation for this dataset is to analyze the mean averageRating of each principal in IMDB (cast or crew member) across all of their accredited titles, along with the mean averageRating across all titles for specific roles ("category" in IMDB's parlance), such as actor, actress, writer, director, producer, and cinematographer. These attributes are then averaged over all cast and crew members for each title in IMDB's dataset. By producing these augmented versions of IMDB's non-commercial datasets, we can analyze the distributions of these scores across principals as well as evaluate correlations between these scores as the films' audience reception.
+The motivation for this dataset is to analyze the mean `averageRating` of each principal in IMDB (cast or crew member) across all of their accredited titles, along with the mean `averageRating` across all titles for specific roles ("category" in IMDB's parlance), such as actor, actress, writer, director, producer, and cinematographer. These attributes are then averaged over all cast and crew members for each title in IMDB's dataset. By producing these augmented versions of IMDB's non-commercial datasets, we can analyze the distributions of these scores across principals as well as evaluate correlations between these scores and the films' audience reception.
 
 ## Provenance
 
