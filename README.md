@@ -12,7 +12,7 @@ This dataset and corresponding notebook captures an analysis of cast and crew me
 
 ## Tools
 
-## Notebook
+## Scripts
 
 ### Installation
 
@@ -20,7 +20,9 @@ This dataset and corresponding notebook captures an analysis of cast and crew me
 
 #### Installing requirements
 
-#### Running the Jupyter notebook
+### Data Engineering
+
+### Exploratory Data Analysis
 
 ## Ethics Statement
 
