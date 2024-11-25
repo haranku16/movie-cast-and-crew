@@ -173,27 +173,33 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Running the scripts
-
-#### `data-engineering.py`
+### Running unit tests
 
 ```
-python data-engineering.py
+pytest
+```
+
+### Running the scripts
+
+#### `data_engineering.py`
+
+```
+python data_engineering.py
 ```
 
 Note: due to the size of the datasets that are processed, you will need to run the script on a machine with sufficient RAM.
 I ran the script on a Mac mini with 16GB of RAM.
 
-#### `power-analysis.py`
+#### `power_analysis.py`
 
 ```
-python power-analysis.py
+python power_analysis.py
 ```
 
-#### `exploratory-data-analysis.py`
+#### `exploratory_data_analysis.py`
 
 ```
-python exploratory-data-analysis.py
+python exploratory_data_analysis.py
 ```
 
 ## Ethical Considerations

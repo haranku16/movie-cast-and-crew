@@ -9,6 +9,8 @@ packaging==24.2
 pandas==2.2.3
 pillow==11.0.0
 pyparsing==3.2.0
+pytest==8.3.3
+pytest-mock==3.14.0
 python-dateutil==2.9.0.post0
 pytz==2024.2
 scikit-learn==1.5.2
