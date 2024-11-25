@@ -27,6 +27,119 @@ The `power-analysis.py` script computes a required sample size of 668, accountin
 
 ## Exporatory Data Analysis
 
+In this section, I walk through exploratory data analysis of the generated `title.augmented.csv` dataset.
+
+### Data completeness
+
+There are 11,261,935 entries in this dataset (unique titles in IMDB).
+
+Here are the columns and their completeness (1.0 means all rows have a value, 0.0 means none do).
+
+```
+tconst                               1.000000
+titleType                            1.000000
+primaryTitle                         0.999998
+originalTitle                        0.999998
+isAdult                              1.000000
+startYear                            1.000000
+endYear                              1.000000
+runtimeMinutes                       1.000000
+genres                               0.999944
+averageRating                        0.133501
+averageRating_actor                  0.655563
+averageRating_actress                0.533825
+averageRating_archive_footage        0.246011
+averageRating_archive_sound          0.037062
+averageRating_casting_director       0.098014
+averageRating_cinematographer        0.240624
+averageRating_composer               0.230728
+averageRating_director               0.484630
+averageRating_editor                 0.290368
+averageRating_producer               0.456985
+averageRating_production_designer    0.096627
+averageRating_self                   0.568249
+averageRating_writer                 0.553282
+averageRating_principal              0.841646
+```
+
+### Filtering
+
+There's significant missing data in the columns that I'm interested in, which are the `averageRating*` columns. Therefore, I first filter rows on presence of values of the following columns:
+
+```
+averageRating
+averageRating_actor
+averageRating_actress
+averageRating_cinematographer
+averageRating_composer
+averageRating_director
+averageRating_editor
+averageRating_producer
+averageRating_production_designer
+averageRating_writer
+averageRating_principal
+```
+
+### Sampling
+
+We systematically sample using the `startYear` column and aim for a class balance across the first-listed genre of each title, aiming for about 1000 samples (satisfying the result of our power analysis). The unique values of the first-listed genre are 
+
+```
+['Documentary' 'Animation' 'Comedy' 'Short' 'Romance' 'News' 'Drama'
+ 'Fantasy' 'Horror' 'Biography' 'Music' 'Crime' 'Family' 'Adventure'
+ 'Action' 'History' '\\N' 'Mystery' 'Musical' 'War' 'Sci-Fi' 'Western'
+ 'Thriller' 'Sport' 'Film-Noir' 'Talk-Show' 'Game-Show' 'Adult'
+ 'Reality-TV' nan]
+```
+
+The samples per genre after sampling are:
+
+```
+Samples per top_genre:
+             tconst
+top_genre          
+Action           35
+Adult            35
+Adventure        35
+Animation        35
+Biography        35
+Comedy           35
+Crime            35
+Documentary      35
+Drama            35
+Family           35
+Fantasy          35
+Game-Show        35
+History          36
+Horror           35
+Music            35
+Musical          35
+Mystery          35
+News             39
+Reality-TV       35
+Romance          35
+Sci-Fi           35
+Short            35
+Sport            63
+Talk-Show        50
+Thriller         35
+War              50
+Western          37
+\N               35
+```
+
+### Distributions of the `averageRating*` attributes
+
+![Pair Plot](plots/pairplot.png)
+
+### Correlation matrix
+
+![Correlation Matrix](plots/correlation.png)
+
+### Interpretation
+
+In general, the average IMDB rating of a title is correlated with the average of ratings of all principals who were involved in the title's production. The rating of a title is most heavily correlated with the average IMDB rating of the title's writer(s) across all of their work, highlighting the importance of a strong screenplay as the foundation of any production.
+
 ## Scripts
 
 This repository is comprised of the following scripts:
