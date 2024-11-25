@@ -1,5 +1,5 @@
 ![Duke AIPI Logo](https://storage.googleapis.com/aipi_datasets/Duke-AIPI-Logo.png)
-# Movie Cast and Crew Dataset
+# IMDB Movie Cast and Crew Dataset
 This dataset and corresponding notebook captures an analysis of cast and crew member IMDB ratings and box office earnings, and correlation with box office performance and audience/critical reception.
 
 ## Motivation
@@ -24,6 +24,8 @@ Past datasets and analyses have analyzed the effect size of cast star power on a
 ## Power Analysis
 
 The `power-analysis.py` script computes a required sample size of 668, accounting for the Bonferroni correction.
+
+## Exporatory Data Analysis
 
 ## Scripts
 
