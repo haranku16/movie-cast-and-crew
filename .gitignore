@@ -1,0 +1,5 @@
+.venv/
+.data/
+movie-cast-and-crew.csv
+movie-cast-and-crew.csv.gz
+*.csv.gz
